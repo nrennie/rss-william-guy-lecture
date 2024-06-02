@@ -4,3 +4,5 @@
 .Ruserdata
 *.Rproj
 images/recording/
+*_files/
+*.html
