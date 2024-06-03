@@ -1,3 +1,7 @@
+---
+format: docx
+---
+
 Hi everyone, I'm Nicola Rennie, a lecturer in health data science at Lancaster University. Welcome to the 2024-2025 William Guy Lecture aimed at secondary school students. I'm going to be talking about how we use statistics to help make decisions in medicine and healthcare. 
 
 But before we get into that, I want to take a moment to tell you a little bit about myself and how I ended up here talking to you. When I was at school, I didn't really know what sort of job I wanted to do. I quite liked maths and science subjects. I decided to go to university and I studied maths. I picked maths because it seemed like it left quite a lot of different career options open - lots of jobs use numbers. And it was at university, that I first learned about statistics. Statistics is a part of maths that involves collecting, analysing, and interpreting data. It's about taking lots of information, like numbers or facts, and using it to understand what’s happening and make decisions.
@@ -6,23 +10,31 @@ So to me, this idea of statistics seemed quite useful, and quite interesting and
 
 What I'm going to talk to you about today, is using statistics in medicine. There are lots of examples of using statistics in medicine - whether that's to investigate where an infectious disease outbreak started, explore the risk factors for different diseases, or study whether different medical treatments work. When we do a study of new medical treatments and look at their effects on human health, this is called a clinical trial.
 
-**Image: scurvy.jpg**
+**Image start: scurvy.jpg**
 
 One of my favourite examples of a clinical trial goes all the way back to 1747. At that time, a disease called scurvy was a huge problem for sailors. Scurvy is caused by not having enough vitamin C - although in 1747, we didn't know that. James Lind, a Scottish doctor in the Royal Navy, selected 12 patients with scurvy on a ship, and gave them each one of 6 possible treatments. Some of the treatments included drinking vinegar, eating garlic paste, drinking sea-water, or eating citrus fruits like lemons or oranges. The sailors whose daily diet included citrus fruits recovered, but the others still had symptoms - showing that citrus fruits could cure scurvy. 
 
+**Image end: scurvy.jpg**
+
 Coming back to the modern day, now clinical trials are used to test the safety and effectiveness of all kinds of medical treatments. So let's think about a more modern problem. I want you to think about the last time you had a headache, or an earache, or you just weren't feeling very well. Maybe you told your parents, or a teacher, or another responsible grown up that you weren't feeling well. And maybe they gave you some medicine, or they took you to a doctor or nurse who gave you some medicine. How did they know that that medicine would work? How did they know how much of that medicine to give you? And how did they know it was safe to give you? 
 
-**Image: bbc.png**
+**Image start: bbc.png**
 
 Some of you might have seen or heard discussions about these questions a few years ago when Covid vaccines were first introduced. But it's not just vaccines we're talking about. We need to understand these questions for all medicines and treatments.
+
+**Image end: bbc.png**
 
 Maybe the obvious answer to these questions is - the medication has been tested. But that's quite a simple answer. How can we be quite certain that a medicine is working? How many people should a medicine be tested on? How do we decide which people it should be tested on? That's where statistics comes in. 
 
 Let's say someone has developed a new treatment for high blood pressure. Blood pressure is the force of your blood pushing against the walls of your blood vessels as your heart pumps the blood around your body. 
 
-**Image: blood-pressure.jpg**
+**Image start: blood-pressure.jpg**
 
-It can be measured using a blood pressure monitor - it's usually a cuff that wraps around your arm, and gives us two numbers back out - a maximum and a minimum pressure. If these numbers are high, so if they're above some threshold, then the person would have high blood pressure. High blood pressure can increase your risk of other, more serious, health conditions so it's important that it gets treated. How do we test if this new high blood pressure treatment works?
+It can be measured using a blood pressure monitor - it's usually a cuff that wraps around your arm, and gives us two numbers back out - a maximum and a minimum pressure. If these numbers are high, so if they're above some threshold, then the person would have high blood pressure. High blood pressure can increase your risk of other, more serious, health conditions so it's important that it gets treated.
+
+**Image end: blood-pressure.jpg**
+
+How do we test if this new high blood pressure treatment works?
 
 Let's start with the first question - what do we mean by "the treatment works". We need to start by deciding what we're going to measure. We could measure someone's blood pressure after they have taken the new treatment. But that doesn't really tell us much about the treatment. We don't know if their blood pressure has actually changed if we only have one number.
 
@@ -44,29 +56,41 @@ So we know how to decide how many people we need to include in our study. Often,
 
 There are a few different options for what we compare our new treatment to. We could compare our it to no treatment. Does this new treatment improve blood pressure more than not taking any medication? In medicine, that's not always a good comparison. Because that means that some people would receive no treatment for their high blood pressure, and that's not good. So we often compare it to the current treatment for high blood pressure. If we're comparing a new treatment to an existing treatment, how do we decide who gets which one?
 
-**Image: allocation1.png**
+**Image start: allocation1.png**
 
-Often, if we have two treatments to compare, we want half to get the new treatment, and half to get the current treatment. To make sure that the study is as fair as possible, we want to randomly decide which of the two treatments each person gets - like flipping a coin. Heads, new treatment. Tails, current treatment. We do this to make reduce the chances that something other than the treatment is responsible for any changes. For example, imagine we gave the first 10 people the current treatment, and the next 10 people the new treatment. What if people who are more sick go to the doctor first, and so get the current treatment? It might look like the new treatment doesn't work as well, but it's actually only because they weren't as ill to start with.
+Often, if we have two treatments to compare, we want half to get the new treatment, and half to get the current treatment. To make sure that the study is as fair as possible, we want to randomly decide which of the two treatments each person gets - like flipping a coin. Heads, new treatment. Tails, current treatment.
 
-**Image: allocation2.png**
+**Image end: allocation1.png**
+
+We do this to make reduce the chances that something other than the treatment is responsible for any changes. For example, imagine we gave the first 10 people the current treatment, and the next 10 people the new treatment. What if people who are more sick go to the doctor first, and so get the current treatment? It might look like the new treatment doesn't work as well, but it's actually only because they weren't as ill to start with.
+
+**Image start: allocation2.png**
 
 Sometimes this "coin-flipping" approach means we don't get exactly half and half for each treatment. Try flipping a coin 10 times - do you get exactly 5 heads? This isn't as much of a problem when we have lots of people in a study. If we only have a small number of people in the the trial, we can use more complicated statistical methods to make sure we get equal group sizes.
+
+**Image end: allocation2.png**
 
 So we've decided how many people to include in the study, and we've decided which treatment each of them will have. How do we determine if our new treatment is better than the current treatment?
 
 For each person we have information about their change in blood pressure before and after treatment, and we know which treatment they received. One of the things we should do, is look at the data and make some plots.
 
-**Image: density1.png**
+**Image start: density1.png**
 
 A density plot can be really useful for this type of data. A density plot is a type of graph that shows where data points are bunched up, and where they are spread out. Here’s an easy way to understand it: Imagine a a pile of sand that you pour onto a table. The sand forms a hill. The highest part of the hill shows where most of the sand is, and the sides show where there’s less sand. Now, instead of sand, imagine each grain is a piece of data. Here, each grain of sand is the change in the person's blood pressure reading. Where the sand hill is highest, that's where most of the data points are. So in this example, lots of people had a change in blood pressure of about three. A few people had a bigger change. And a small number of people actually had an increase. 
 
-**Image: density2.png**
+**Image end: density1.png**
+
+**Image start: density2.png**
 
 We can compare the density plots for each type of treatment. The blue plot shows the changes in blood pressure for people who had the current treatment, and the yellow plot shows the treatment who had our new treatment. You can see that with the new treatment gives a higher drop in blood pressure compare to the current treatment. There's a small overlap between the two, but generally it looks like the two treatments are quite different to each other. 
 
-**Image: density3.png**
+**Image end: density2.png**
+
+**Image start: density3.png**
 
 It gets a little bit harder to say whether the treatments are actually different from each other when there's more of an overlap. Here, the new treatment is still a little bit higher but there's a lot of overlap between the two plots. We can use statistical tests to tell us if it's likely that the difference between the two treatments is actually real. 
+
+**Image end: density3.png**
 
 Of course, it's not just about whether treatments are different according to statistics. We need to think about whether they are different enough to make a difference in medical treatment. A new treatment might be better at reducing blood pressure, but if it only reduces blood pressure by 0.5 then it might not be enough to decide to invest lots of money in developing the new treatment. Statistics is a very important part of medical research, but it works best when statistics experts work closely with other people involved in medicine, such as doctors, nurses, biomedical scientists, or technicians.
 
