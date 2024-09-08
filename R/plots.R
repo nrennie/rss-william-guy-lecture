@@ -12,8 +12,10 @@ library(glue)
 font_add_google("Source Sans 3", "source")
 showtext_auto()
 
-sysfonts::font_add(family = "Font Awesome 6 Solid",
-                   regular = "fonts/Font Awesome 6 Free-Solid-900.otf")
+sysfonts::font_add(
+  family = "Font Awesome 6 Solid",
+  regular = "fonts/Font Awesome 6 Free-Solid-900.otf"
+)
 showtext::showtext_auto()
 
 
@@ -38,9 +40,10 @@ gg_record(
   width = 6,
   height = 4,
   units = "in",
-  dpi = 300)
+  dpi = 300
+)
 
-  
+
 # Plot 1 ------------------------------------------------------------------
 
 set.seed(12345)
@@ -48,27 +51,35 @@ plot_data1 <- data.frame(
   change = c(rnorm(50, 3, 1))
 )
 ggplot(plot_data1) +
-  geom_density(mapping = aes(x = change),
-               colour = rss_blue,
-               fill = rss_blue,
-               alpha = 0.3) +
-  geom_vline(xintercept = 0,
-             colour = "#A4243B",
-             linewidth = 0.5) +
+  geom_density(
+    mapping = aes(x = change),
+    colour = rss_blue,
+    fill = rss_blue,
+    alpha = 0.3
+  ) +
+  geom_vline(
+    xintercept = 0,
+    colour = "#A4243B",
+    linewidth = 0.5
+  ) +
   labs(
     x = "Change in systolic blood pressure (mmHg)",
     y = ""
   ) +
   scale_x_continuous(limits = c(-6, 6), expand = expansion(0, 0)) +
   theme_minimal(base_size = 32, base_family = body_font) +
-  theme(axis.text.y = element_blank(),
-        axis.ticks = element_blank(),
-        plot.background = element_rect(
-          fill = "transparent", colour = "transparent"),
-        panel.background = element_rect(
-          fill = "transparent", colour = "transparent"))
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank(),
+    plot.background = element_rect(
+      fill = "transparent", colour = "transparent"
+    ),
+    panel.background = element_rect(
+      fill = "transparent", colour = "transparent"
+    )
+  )
 
-ggsave("images/density1.png", width = 6, height = 4, bg = "transparent")
+ggsave("images/density1_raw.png", width = 6, height = 4, bg = "transparent")
 
 # Plot 2 ------------------------------------------------------------------
 
@@ -78,8 +89,10 @@ plot_data2 <- data.frame(
   type = c(rep("New treatment", 25), rep("Current treatment", 25))
 )
 ggplot(plot_data2) +
-  geom_density(mapping = aes(x = change, colour = type, fill = type),
-               alpha = 0.3) +
+  geom_density(
+    mapping = aes(x = change, colour = type, fill = type),
+    alpha = 0.3
+  ) +
   scale_fill_manual(
     values = c(rss_blue, rss_yellow)
   ) +
@@ -92,17 +105,21 @@ ggplot(plot_data2) +
   ) +
   scale_x_continuous(limits = c(-6, 6), expand = expansion(0, 0)) +
   theme_minimal(base_size = 32, base_family = body_font) +
-  theme(axis.text.y = element_blank(),
-        legend.title = element_blank(),
-        legend.position = "inside",
-        legend.position.inside = c(0.2, 0.85),
-        axis.ticks = element_blank(),
-        plot.background = element_rect(
-          fill = "transparent", colour = "transparent"),
-        panel.background = element_rect(
-          fill = "transparent", colour = "transparent"))
+  theme(
+    axis.text.y = element_blank(),
+    legend.title = element_blank(),
+    legend.position = "inside",
+    legend.position.inside = c(0.2, 0.85),
+    axis.ticks = element_blank(),
+    plot.background = element_rect(
+      fill = "transparent", colour = "transparent"
+    ),
+    panel.background = element_rect(
+      fill = "transparent", colour = "transparent"
+    )
+  )
 
-ggsave("images/density2.png", width = 6, height = 4, bg = "transparent")
+ggsave("images/density2_raw.png", width = 6, height = 4, bg = "transparent")
 
 
 
@@ -114,8 +131,10 @@ plot_data3 <- data.frame(
   type = c(rep("New treatment", 25), rep("Current treatment", 25))
 )
 ggplot(plot_data2) +
-  geom_density(mapping = aes(x = change, colour = type, fill = type),
-               alpha = 0.3) +
+  geom_density(
+    mapping = aes(x = change, colour = type, fill = type),
+    alpha = 0.3
+  ) +
   scale_fill_manual(
     values = c(rss_blue, rss_yellow)
   ) +
@@ -128,23 +147,18 @@ ggplot(plot_data2) +
   ) +
   scale_x_continuous(limits = c(-6, 6), expand = expansion(0, 0)) +
   theme_minimal(base_size = 32, base_family = body_font) +
-  theme(axis.text.y = element_blank(),
-        legend.title = element_blank(),
-        legend.position = "inside",
-        legend.position.inside = c(0.2, 0.85),
-        axis.ticks = element_blank(),
-        plot.background = element_rect(
-          fill = "transparent", colour = "transparent"),
-        panel.background = element_rect(
-          fill = "transparent", colour = "transparent"))
+  theme(
+    axis.text.y = element_blank(),
+    legend.title = element_blank(),
+    legend.position = "inside",
+    legend.position.inside = c(0.2, 0.85),
+    axis.ticks = element_blank(),
+    plot.background = element_rect(
+      fill = "transparent", colour = "transparent"
+    ),
+    panel.background = element_rect(
+      fill = "transparent", colour = "transparent"
+    )
+  )
 
-ggsave("images/density3.png", width = 6, height = 4, bg = "transparent")
-
-
-
-
-
-
-
-
-
+ggsave("images/density3_raw.png", width = 6, height = 4, bg = "transparent")

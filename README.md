@@ -1,7 +1,5 @@
 # RSS William Guy Lecture 2024-2025 (11-16 year olds)
 
-More information about the William Guy Lectures can be found at: [rss.org.uk/policy-campaigns/policy-groups/education-policy-advisory-group/rss-william-guy-lecturers](https://rss.org.uk/policy-campaigns/policy-groups/education-policy-advisory-group/rss-william-guy-lecturers/).
-
 ## From lab to patient: how statistics shapes decisions in medicine
 
 ### Abstract
@@ -27,3 +25,7 @@ Nicola is a lecturer in health data science at Lancaster University. Nicola carr
 * BBC News: [www.bbc.co.uk/news/health-55056016](https://www.bbc.co.uk/news/health-55056016)
 
 * Blood pressure cuff: [unsplash.com/photos/white-and-black-digital-device-i1iqQRLULlg](https://unsplash.com/photos/white-and-black-digital-device-i1iqQRLULlg)
+
+## Further information
+
+More information about the William Guy Lectures can be found at: [rss.org.uk/policy-campaigns/policy-groups/education-policy-advisory-group/rss-william-guy-lecturers](https://rss.org.uk/policy-campaigns/policy-groups/education-policy-advisory-group/rss-william-guy-lecturers/).
