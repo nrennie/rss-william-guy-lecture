@@ -12,12 +12,11 @@ In the talk, we’ll discuss concepts such as randomisation, control groups, and
 
 ## Speaker
 
-<p align="center">
-<img width="49%" src="images/nicola.jpg" alt="Photo of Nicola">
-<p width="49%"> Test </p>
-</p>
-
 Nicola is a lecturer in health data science at Lancaster University. Nicola carries out research using healthcare data, including applying statistical and machine learning models to routinely collected data. She is especially interested in visualising data and understanding how we can better communicate statistics to general audiences. Nicola is particularly keen to show young people the broad variety of careers that statistics can lead them to and has delivered multiple talks to school students about using data to make the world better. She is keen to support women and minorities in their data science and programming journeys and organises local meetups to develop skills. 
+
+<p align="center">
+<img width="100%" src="images/nicola.jpg" alt="Photo of Nicola">
+</p>
 
 ## Images
 
